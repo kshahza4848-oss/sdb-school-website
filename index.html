@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S D B Public School</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#0b1020;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    header{
+      background:linear-gradient(90deg,#111827,#1e3a8a,#0f172a);
+      padding:20px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 0 15px rgba(0,0,0,0.5);
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav h1{
+      color:#38bdf8;
+      font-size:32px;
+    }
+
+    nav ul{
+      display:flex;
+      gap:20px;
+      list-style:none;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#38bdf8;
+    }
+
+    .hero{
+      height:90vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1400&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      padding:20px;
+    }
+
+    .hero-content{
+      max-width:800px;
+    }
+
+    .hero h2{
+      font-size:60px;
+      color:#38bdf8;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:22px;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border:none;
+      border-radius:10px;
+      background:#38bdf8;
+      color:black;
+      font-size:18px;
+      cursor:pointer;
+      transition:0.3s;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      background:white;
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      color:#38bdf8;
+      margin-bottom:50px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#111827;
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+      box-shadow:0 0 10px rgba(56,189,248,0.2);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 20px rgba(56,189,248,0.5);
+    }
+
+    .card h3{
+      color:#38bdf8;
+      margin-bottom:15px;
+    }
+
+    .notice-box{
+      background:#1e293b;
+      border-left:5px solid #38bdf8;
+      padding:25px;
+      border-radius:15px;
+      margin-top:20px;
+      font-size:20px;
+    }
+
+    .ai-box{
+      background:#111827;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      margin-top:30px;
+      box-shadow:0 0 20px rgba(56,189,248,0.3);
+    }
+
+    .ai-box input{
+      width:80%;
+      padding:15px;
+      margin-top:20px;
+      border:none;
+      border-radius:10px;
+      font-size:16px;
+    }
+
+    .ai-box button{
+      margin-top:15px;
+    }
+
+    #aiResponse{
+      margin-top:20px;
+      font-size:18px;
+      color:#38bdf8;
+    }
+
+    form{
+      background:#111827;
+      padding:40px;
+      border-radius:20px;
+      max-width:700px;
+      margin:auto;
+      box-shadow:0 0 20px rgba(56,189,248,0.3);
+    }
+
+    form input, form textarea, form select{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border:none;
+      border-radius:10px;
+      font-size:16px;
+    }
+
+    footer{
+      background:#020617;
+      text-align:center;
+      padding:30px;
+      margin-top:50px;
+      color:#94a3b8;
+    }
+
+    .glow{
+      animation:glow 2s infinite alternate;
+    }
+
+    @keyframes glow{
+      from{
+        text-shadow:0 0 10px #38bdf8;
+      }
+      to{
+        text-shadow:0 0 25px #38bdf8;
+      }
+    }
+
+    @media(max-width:768px){
+      .hero h2{
+        font-size:40px;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1 class="glow">S D B Public School</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#admission">Admission</a></li>
+        <li><a href="#ai">AI Assistant</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2 class="glow">Future AI School Website</h2>
+      <p>
+        Welcome to S D B Public School. Smart Learning, AI Education, Online Admission,
+        Student Portal and Advanced School Technology.
+      </p>
+      <a href="#admission"><button class="btn">Apply Admission</button></a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Our School</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Smart Classes</h3>
+        <p>AI based smart classrooms with digital education and futuristic learning system.</p>
+      </div>
+
+      <div class="card">
+        <h3>Best Teachers</h3>
+        <p>Highly experienced teachers with modern technology teaching methods.</p>
+      </div>
+
+      <div class="card">
+        <h3>Online Learning</h3>
+        <p>Students can access assignments, notes and learning resources online.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <h2 class="section-title">Advanced AI Features</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>AI Attendance</h3>
+        <p>Future facial recognition attendance system for students.</p>
+      </div>
+
+      <div class="card">
+        <h3>AI Chat Support</h3>
+        <p>Students and parents can ask questions using AI assistant.</p>
+      </div>
+
+      <div class="card">
+        <h3>Result Portal</h3>
+        <p>Students can check marks and results online anytime.</p>
+      </div>
+    </div>
+
+    <div class="notice-box">
+      <strong>Admission Notice:</strong>
+      <p id="admissionStatus">Admissions are currently CLOSED.</p>
+      <button class="btn" onclick="toggleAdmission()">Change Admission Status</button>
+    </div>
+  </section>
+
+  <section id="ai">
+    <h2 class="section-title">School AI Assistant</h2>
+
+    <div class="ai-box">
+      <p>Ask AI Assistant About School</p>
+
+      <input type="text" id="aiInput" placeholder="Ask something like fees, admission, timings...">
+      <br>
+      <button class="btn" onclick="askAI()">Ask AI</button>
+
+      <div id="aiResponse"></div>
+    </div>
+  </section>
+
+  
+<section>
+  <h2 class="section-title">Admin Dashboard</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Total Students</h3>
+      <p id="studentCount">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Total Teachers</h3>
+      <p id="teacherCount">0</p>
+    </div>
+
+    <div class="card">
+      <h3>Database Status</h3>
+      <p>Connected Successfully</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Teacher Registration</h2>
+
+  <form onsubmit="addTeacher(event)">
+    <input type="text" id="teacherName" placeholder="Teacher Name" required>
+
+    <input type="text" id="teacherSubject" placeholder="Subject" required>
+
+    <input type="text" id="teacherPhone" placeholder="Mobile Number" required>
+
+    <input type="password" id="teacherPassword" placeholder="Password" required>
+
+    <button class="btn">Save Teacher</button>
+  </form>
+</section>
+
+<section>
+  <h2 class="section-title">Teacher Login</h2>
+
+  <form onsubmit="teacherLoginSystem(event)">
+    <input type="text" id="teacherLoginID" placeholder="Teacher ID">
+
+    <input type="password" id="teacherLoginPass" placeholder="Password">
+
+    <button class="btn">Teacher Login</button>
+  </form>
+</section>
+
+<section>
+  <h2 class="section-title">Student Login</h2>
+
+  <form onsubmit="studentLoginSystem(event)">
+    <input type="number" id="studentRollLogin" placeholder="Roll Number">
+
+    <input type="password" id="studentPassLogin" placeholder="Password">
+
+    <button class="btn">Student Login</button>
+  </form>
+</section>
+
+<section>
+  <h2 class="section-title">Find Student Information</h2>
+
+  <form onsubmit="searchStudent(event)">
+    <input type="number" id="searchRoll" placeholder="Enter Roll Number">
+
+    <button class="btn">Search Student</button>
+  </form>
+
+  <div id="studentData" class="notice-box"></div>
+</section>
+
+<section id="admission">
+    <h2 class="section-title">Online Admission Form</h2>
+
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Student Name" required>
+
+      <input type="number" placeholder="Age" required>
+
+      <select required>
+        <option value="">Select Class</option>
+        <option>Class 1</option>
+        <option>Class 2</option>
+        <option>Class 3</option>
+        <option>Class 4</option>
+        <option>Class 5</option>
+        <option>Class 6</option>
+        <option>Class 7</option>
+        <option>Class 8</option>
+        <option>Class 9</option>
+        <option>Class 10</option>
+        <option>Class 11</option>
+        <option>Class 12</option>
+      </select>
+
+      <input type="email" placeholder="Parent Email" required>
+
+      <input type="tel" placeholder="Mobile Number" required>
+
+      <textarea rows="5" placeholder="Address"></textarea>
+
+      <input type="password" placeholder="Create Student Password" required>
+
+      <button type="submit" class="btn">Submit Admission Form</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>School Address</h3>
+        <p>S D B Public School, India</p>
+      </div>
+
+      <div class="card">
+        <h3>Email</h3>
+        <p>sdbschool@gmail.com</p>
+      </div>
+
+      <div class="card">
+        <h3>Phone</h3>
+        <p>+91 9876543210</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 S D B Public School | Future AI Education Website</p>
+  </footer>
+
+  <script>
+
+// =========================
+// ADVANCED SCHOOL DATABASE
+// =========================
+
+let students = JSON.parse(localStorage.getItem('students')) || [];
+let teachers = JSON.parse(localStorage.getItem('teachers')) || [];
+
+function saveStudents(){
+  localStorage.setItem('students', JSON.stringify(students));
+}
+
+function saveTeachers(){
+  localStorage.setItem('teachers', JSON.stringify(teachers));
+}
+
+function generateRoll(){
+  return 1000 + students.length + 1;
+}
+
+function generateTeacherID(){
+  return 'T' + (500 + teachers.length + 1);
+}
+
+    function toggleAdmission(){
+      const status=document.getElementById('admissionStatus');
+
+      if(status.innerText.includes('CLOSED')){
+        status.innerText='Admissions are currently OPEN.';
+        status.style.color='lightgreen';
+      }
+      else{
+        status.innerText='Admissions are currently CLOSED.';
+        status.style.color='red';
+      }
+    }
+
+    function submitForm(event){
+      event.preventDefault();
+
+      const inputs = event.target.querySelectorAll('input, select, textarea');
+
+      const student = {
+        roll: generateRoll(),
+        name: inputs[0].value,
+        age: inputs[1].value,
+        className: inputs[2].value,
+        email: inputs[3].value,
+        phone: inputs[4].value,
+        address: inputs[5].value,
+        password: inputs[6] ? inputs[6].value : 'student123'
+      };
+
+      students.push(student);
+      saveStudents();
+      updateDashboard();
+
+      alert('Admission Successful! Roll Number: ' + student.roll + ' Password: student123');
+
+      event.target.reset();
+    }
+
+    function askAI(){
+      const input=document.getElementById('aiInput').value.toLowerCase();
+      const response=document.getElementById('aiResponse');
+
+      if(input.includes('fees')){
+        response.innerHTML='School fees information is available at school office.';
+      }
+      else if(input.includes('admission')){
+        response.innerHTML='Admissions are open for all classes.';
+      }
+      else if(input.includes('timing')){
+        response.innerHTML='School timing is 8:00 AM to 2:00 PM.';
+      }
+      else if(input.includes('contact')){
+        response.innerHTML='Contact us at +91 9876543210.';
+      }
+      else{
+        response.innerHTML='AI Assistant: Please contact school office for more details.';
+      }
+    }
+  </script>
+
+
+
+<!-- EXTRA ADVANCED FEATURES -->
+
+<style>
+  .portal-section{
+    background:#0f172a;
+    padding:80px 10%;
+  }
+
+  .portal-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+  }
+
+  .portal-card{
+    background:#111827;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 0 15px rgba(56,189,248,0.2);
+    transition:0.3s;
+  }
+
+  .portal-card:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 25px rgba(56,189,248,0.5);
+  }
+
+  .portal-card h3{
+    color:#38bdf8;
+    margin-bottom:15px;
+  }
+
+  .result-box{
+    background:#111827;
+    padding:40px;
+    border-radius:20px;
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+  }
+
+  .result-box input{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+  }
+
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+  }
+
+  .gallery img{
+    width:100%;
+    border-radius:20px;
+    height:250px;
+    object-fit:cover;
+    transition:0.3s;
+  }
+
+  .gallery img:hover{
+    transform:scale(1.05);
+  }
+
+  .theme-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:1000;
+  }
+
+  .light-mode{
+    background:#f1f5f9;
+    color:black;
+  }
+
+  .light-mode .card,
+  .light-mode .portal-card,
+  .light-mode .result-box,
+  .light-mode form,
+  .light-mode .ai-box{
+    background:white;
+    color:black;
+  }
+</style>
+
+<section class="portal-section">
+  <h2 class="section-title">Student & Teacher Portals</h2>
+
+  <div class="portal-grid">
+    <div class="portal-card">
+      <h3>Student Login</h3>
+      <p>Students can access homework, attendance, results and study material.</p>
+      <button class="btn" onclick="studentLogin()">Student Login</button>
+    </div>
+
+    <div class="portal-card">
+      <h3>Teacher Login</h3>
+      <p>Teachers can manage marks, notices and online classes.</p>
+      <button class="btn" onclick="teacherLogin()">Teacher Login</button>
+    </div>
+
+    <div class="portal-card">
+      <h3>AI Voice Assistant</h3>
+      <p>Talk with school AI assistant using voice technology.</p>
+      <button class="btn" onclick="startVoiceAI()">Start Voice AI</button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Add Student Result</h2>
+
+  <form onsubmit="saveStudentResult(event)">
+    <input type="number" id="resultRoll" placeholder="Student Roll Number" required>
+
+    <input type="text" id="resultGrade" placeholder="Grade (A/B/C)" required>
+
+    <input type="number" id="resultPercent" placeholder="Percentage" required>
+
+    <button class="btn">Save Result</button>
+  </form>
+</section>
+
+<section>
+  <h2 class="section-title">Check Student Result</h2>
+
+  <div class="result-box">
+    <h3>Enter Roll Number</h3>
+    <input type="text" id="rollNumber" placeholder="Enter Roll Number">
+    <br><br>
+    <button class="btn" onclick="checkResult()">Check Result</button>
+
+    <div id="resultOutput" style="margin-top:20px;color:#38bdf8;font-size:20px;"></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">School Gallery</h2>
+
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop">
+
+    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop">
+
+    <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?q=80&w=1200&auto=format&fit=crop">
+
+    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop">
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">School Notices</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Summer Vacation</h3>
+      <p>School will remain closed from June 10 to June 25.</p>
+    </div>
+
+    <div class="card">
+      <h3>Annual Function</h3>
+      <p>Annual function will be held next month with AI science exhibition.</p>
+    </div>
+
+    <div class="card">
+      <h3>Admission Open</h3>
+      <p>Admissions are open for session 2026-27.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Online Fee Payment</h2>
+
+  <form onsubmit="payFees(event)">
+    <input type="text" placeholder="Student Name" required>
+    <input type="text" placeholder="Class" required>
+    <input type="number" placeholder="Amount" required>
+    <button class="btn">Pay Fees</button>
+  </form>
+</section>
+
+<button class="btn theme-btn" onclick="toggleTheme()">Change Theme</button>
+
+<script>
+  function studentLogin(){
+    alert('Student Login Portal Ready');
+  }
+
+  function studentLoginSystem(event){
+    event.preventDefault();
+
+    const roll = document.getElementById('studentRollLogin').value;
+    const pass = document.getElementById('studentPassLogin').value;
+
+    const student = students.find(s => s.roll == roll && s.password == pass);
+
+    if(student){
+      alert('Welcome ' + student.name + ' | Class: ' + student.className);
+    }
+    else{
+      alert('Invalid Student Login');
+    }
+  }
+
+  function teacherLogin(){
+    alert('Teacher Login Portal Ready');
+  }
+
+  function addTeacher(event){
+    event.preventDefault();
+
+    const teacher = {
+      id: generateTeacherID(),
+      name: document.getElementById('teacherName').value,
+      subject: document.getElementById('teacherSubject').value,
+      phone: document.getElementById('teacherPhone').value,
+      password: document.getElementById('teacherPassword').value
+    };
+
+    teachers.push(teacher);
+    saveTeachers();
+    updateDashboard();
+
+    alert('Teacher Saved Successfully! ID: ' + teacher.id);
+
+    event.target.reset();
+  }
+
+  function teacherLoginSystem(event){
+    event.preventDefault();
+
+    const id = document.getElementById('teacherLoginID').value;
+    const pass = document.getElementById('teacherLoginPass').value;
+
+    const teacher = teachers.find(t => t.id == id && t.password == pass);
+
+    if(teacher){
+      alert('Welcome Teacher ' + teacher.name + ' | Subject: ' + teacher.subject);
+    }
+    else{
+      alert('Invalid Teacher Login');
+    }
+  }
+
+  function saveStudentResult(event){
+    event.preventDefault();
+
+    const roll = document.getElementById('resultRoll').value;
+    const grade = document.getElementById('resultGrade').value;
+    const percent = document.getElementById('resultPercent').value;
+
+    const student = students.find(s => s.roll == roll);
+
+    if(student){
+      student.grade = grade;
+      student.percentage = percent;
+      saveStudents();
+      alert('Result Saved Successfully');
+    }
+    else{
+      alert('Student Not Found');
+    }
+  }
+
+  function checkResult(){
+    const roll=document.getElementById('rollNumber').value;
+    const output=document.getElementById('resultOutput');
+
+    const student = students.find(s => s.roll == roll);
+
+    if(student && student.grade){
+      output.innerHTML=`
+        <h3>Student Result</h3>
+        <p><strong>Name:</strong> ${student.name}</p>
+        <p><strong>Roll Number:</strong> ${student.roll}</p>
+        <p><strong>Class:</strong> ${student.className}</p>
+        <p><strong>Grade:</strong> ${student.grade}</p>
+        <p><strong>Percentage:</strong> ${student.percentage}%</p>
+      `;
+    }
+    else{
+      output.innerHTML='No Result Found';
+    }
+  }
+
+  function payFees(event){
+    event.preventDefault();
+    alert('Fees Payment Successful');
+  }
+
+  function toggleTheme(){
+    document.body.classList.toggle('light-mode');
+  }
+
+  function searchStudent(event){
+    event.preventDefault();
+
+    const roll = document.getElementById('searchRoll').value;
+    const output = document.getElementById('studentData');
+
+    const student = students.find(s => s.roll == roll);
+
+    if(student){
+      output.innerHTML = `
+        <h3>Student Information</h3>
+        <p><strong>Name:</strong> ${student.name}</p>
+        <p><strong>Roll Number:</strong> ${student.roll}</p>
+        <p><strong>Class:</strong> ${student.className}</p>
+        <p><strong>Phone:</strong> ${student.phone}</p>
+        <p><strong>Address:</strong> ${student.address}</p>
+      `;
+    }
+    else{
+      output.innerHTML = 'Student Not Found';
+    }
+  }
+
+  function updateDashboard(){
+    document.getElementById('studentCount').innerText = students.length;
+    document.getElementById('teacherCount').innerText = teachers.length;
+  }
+
+  updateDashboard();
+
+  function startVoiceAI(){
+    const speech=new SpeechSynthesisUtterance('Welcome to S D B Public School AI Assistant');
+    speech.lang='en-US';
+    window.speechSynthesis.speak(speech);
+  }
+</script>
+
+</body>
+</html>
